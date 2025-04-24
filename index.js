@@ -32,7 +32,7 @@ class Room {
 
   describe() {
     return (
-      "Looking around the " + this._name + " you can see " + this._description
+      "You are in the " + this._name + ". " + this._description
     );
   }
 
@@ -151,7 +151,7 @@ class Enemy extends Character {
 
 //room objects
 const Garden = new Room("garden");
-Garden.description = "";
+Garden.description = "You approach the house, hearing the muffled bass from the music inside. ";
 const Entrance = new Room("entrance");
 Entrance.description = "";
 const Hallway = new Room("hallway");
@@ -193,4 +193,55 @@ Closet.linkRoom("west", Bedroom2);
 
 //start game
 
+ // var button = document.querySelector('#start-button');
+// var input = document.querySelector('#name-input');
+// var content = document.querySelector('#content');
+// button.addEventListener('click', function() {
+   // content.innerHTML = 
+   //<h1>Welcome blah blah</h1>
+   //<p>you arrive at dhjhddjdkjd</p>
+   //<input id = "radio1" type = "radio" />
+   //<label for "radio1">Knock</label>
+//})
 
+function displayRoomInfo(room) {
+  let occupantMsg = ""
+  if (room.character === "") {
+    occupantMsg = ""
+  } else {
+    occupantMsg = room.character.describe() + ". " + room.character.converse()
+  
+  }
+  }
+
+
+function startGame() {
+  currentRoom = Garden
+  console.log(displayRoomInfo(currentRoom));
+}
+  //set and display start room
+  //currentRoom = Garden
+  //describe(currentRoom);
+
+  //
+
+  //handle commands
+
+ // var button = document.querySelector('#start-button')
+ // button.addEventListener('click', startGame())
+
+  //document.addEventListener("keydown", function (event) {
+    //if (event.key === "Enter") {
+      //command = document.getElementById("usertext").value;
+      //const directions = ["north", "south", "east", "west"]
+      //if (directions.includes(command.toLowerCase())) {
+        //currentRoom = currentRoom.move(command)
+        //displayRoomInfo(currentRoom);
+      //} else {
+        //document.getElementById("usertext").value = ""
+        //alert("that is not a valid command please try again")
+      //}
+    
+  //}
+  //}
+//)}
