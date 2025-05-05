@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Battery</title>
+  <head>
+    <!--required meta-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-        <h1>SOCIAL BATTERY</h1>
-
-        <div id="intro">
-            <p>blah blah house party, click the button to travel to the given address</p>
-            <!--<button id = "start-button">Start the story!!</button>-->
-            <input id="start-button" type="button" value="Start Game" onclick="startGame();" />
-            
-        </div>
-        
-    <script src="index.js"></script>
-</body>
+  </head>
+  <body>
+        <h1>Text Adventure Game</h1>
+            <p id="textarea"></p>
+            <label for="usertext">Enter your command:</label>
+              <input type="text" id="usertext" placeholder="Type a direction (north, south, east, west) and press Enter"/>
+    <!-- link to external JavaScript-->
+    <script src="game.js"></script>
+  </body>
 </html>
