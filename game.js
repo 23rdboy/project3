@@ -166,7 +166,7 @@ const Wardrobe = new Room("wardrobe");
 Wardrobe.description = "you've been shut in, but not trapped, do you dare leave? ";
 
 const Bedroom = new Room("bedroom");
-Bedroom.description = "it is in disarray, and could do with a clean. There is a door to your south but it appears to be locked. Perhaps you should look for an item to help";
+Bedroom.description = "it is in disarray. There is a door to your south but it appears to be locked. Perhaps you should look for an item to help";
 const teddyBear = new Item("teddy bear");
 teddyBear.description = "laying on the floor, worn and tattered but still full of love, the comfort of a companion is tempting. Will you collect him?";
 Bedroom.addItem(teddyBear);
