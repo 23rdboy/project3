@@ -163,29 +163,29 @@ class Character {
 }
 
 const Wardrobe = new Room("wardrobe");
-Wardrobe.description = "";
+Wardrobe.description = "you've been shut in, but not trapped, do you dare leave? ";
 
 const Bedroom = new Room("bedroom");
-Bedroom.description = "";
-const teddyBear = new Item("teddybear");
-teddyBear.description = "";
+Bedroom.description = "it is in disarray, and could do with a clean. There is a door to your south but it appears to be locked. Perhaps you should look for an item to help";
+const teddyBear = new Item("teddy bear");
+teddyBear.description = "laying on the floor, worn and tattered but still full of love, the comfort of a companion is tempting. Will you collect him?";
 Bedroom.addItem(teddyBear);
 
 const enSuite = new Room("ensuite");
-enSuite.description = "";
-const bedroomKey = new Item("bedroomkey");
-bedroomKey.description = "";
+enSuite.description = "it's dirty, and definitely used. You cover your nose as you look around and try not to touch anything you don't have to";
+const bedroomKey = new Item("bedroom key");
+bedroomKey.description = "hidden on top of the medicine cabinet, along with a thick layer of dust. Whoever owns this place must have forgotten they left this here.";
 enSuite.addItem(bedroomKey);
 
 const Hallway = new Room("hallway");
-Hallway.description = "";
+Hallway.description = "like the rooms you've been in previously, it's... definitely lived in. Wallpaper is peeling off of the walls and there's a few crooked paintings hanging up, creepy portraits and lonley-looking landscapes. You hear a noise coming from the living room, someone must be in there, perhaps you can slip straight into the foyer towards freedom?";
 
-const livingRoom = new Room("livingroom");
+const livingRoom = new Room("living room");
 livingRoom.description = "";
 
 const Kitchen = new Room("kitchen");
 Kitchen.description = "";
-const frontdoorKey = new Item("frontdoorkey");
+const frontdoorKey = new Item("front door key");
 frontdoorKey.description = "";
 Kitchen.addItem(frontdoorKey);
 
@@ -195,20 +195,14 @@ Foyer.description = "";
 const Outside = new Room("outside");
 Outside.description = "";
 
-
-
-// Setup rooms and items
-
 Wardrobe.linkRoom("south", Bedroom);
 Bedroom.linkRoom("east", enSuite);
 Bedroom.linkRoom("south", Hallway);
 enSuite.linkRoom("west", Bedroom);
-Hallway.linkRoom("north", Bedroom);
 Hallway.linkRoom("east", livingRoom);
 Hallway.linkRoom("south", Kitchen);
 Hallway.linkRoom("west", Foyer);
 Kitchen.linkRoom("south", Hallway);
-Foyer.linkRoom("east", Hallway);
 Foyer.linkRoom("west", Outside);
 
 let currentRoom = Wardrobe;
